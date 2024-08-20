@@ -1,9 +1,10 @@
 class Sorting:
     def selectionSort(self, arr):
         for i in range(len(arr)):
-            for j in range(len(arr)):
-                if arr[i] < arr[j]:
-                    arr[i], arr[j] = arr[j], arr[i]
+            mini = i
+            for j in range(i, len(arr)):
+                mini = j
+            arr[i], arr[mini] = arr[mini], arr[i]
 
         return arr
 
