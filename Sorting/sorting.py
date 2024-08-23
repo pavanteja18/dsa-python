@@ -3,7 +3,8 @@ class Sorting:
         for i in range(len(arr)):
             mini = i
             for j in range(i, len(arr)):
-                mini = j
+                if arr[j] < arr[mini]: 
+                    mini = j
             arr[i], arr[mini] = arr[mini], arr[i]
 
         return arr
